@@ -13,3 +13,9 @@ output "network_name" {
   description = "Docker network name"
   value       = docker_network.web_network.name
 }
+
+
+output "external_port" {
+  description = "External port used to access the Nginx web server"
+  value       = var.external_port
+}
