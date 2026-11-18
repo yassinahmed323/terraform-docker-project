@@ -8,5 +8,5 @@ variable "container_name" {
 variable "external_port" {
   description = "External port for the web server"
   type        = number
-  default     = 8080
+  default     = 8081
 }

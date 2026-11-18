@@ -212,3 +212,18 @@ I verified that:
 This project helped me understand how Terraform can be used to manage infrastructure through code instead of manually creating resources. I gained hands-on experience with Terraform commands, Docker containers, networking, and troubleshooting.
 
 These skills are relevant to my goal of working in Cloud Engineering and DevOps.
+
+## Terraform Infrastructure Change
+
+For SCRUM-51, I updated the external port of my Nginx Docker container from 8080 to 8081 using Terraform.
+
+I modified the `external_port` variable in `variables.tf`, reviewed the changes using `terraform plan`, and deployed the update using `terraform apply`.
+
+Terraform replaced the existing container to apply the new port configuration. I verified the updated container using `docker ps`, confirmed that the web server returned HTTP 200 OK using `curl -I http://localhost:8081`, and checked the updated values using `terraform output`.
+
+The infrastructure change was successful, and the Nginx web server is now accessible on port 8081.
+
+Evidence:
+- `docs/evidence/17-terraform-port-change-plan.png`
+- `docs/evidence/18-terraform-port-change-apply.png`
+- `docs/evidence/19-terraform-port-change-verification.png`
