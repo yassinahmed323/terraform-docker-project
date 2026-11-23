@@ -227,3 +227,27 @@ Evidence:
 - `docs/evidence/17-terraform-port-change-plan.png`
 - `docs/evidence/18-terraform-port-change-apply.png`
 - `docs/evidence/19-terraform-port-change-verification.png`
+
+## Terraform Destroy and Resource Cleanup
+
+For SCRUM-52, I verified that Terraform could successfully remove the Docker infrastructure created during my quarter project.
+
+I first ran `terraform plan -destroy` to review the resources scheduled for removal. The plan showed 2 resources to destroy.
+
+I then ran `terraform destroy` and confirmed the operation. Terraform reported:
+
+`Destroy complete! Resources: 2 destroyed.`
+
+After the cleanup, I ran the following commands:
+
+- `docker ps -a` — Confirmed no Docker containers remained.
+- `docker network ls` — Confirmed the custom `terraform-web-network` was removed.
+- `terraform state list` — Confirmed no Terraform-managed resources remained.
+
+The cleanup was successful, and my Terraform configuration, documentation, and project evidence were preserved.
+
+### Evidence
+
+- `docs/evidence/20-terraform-destroy-plan.jpeg`
+- `docs/evidence/21-terraform-destroy-complete.jpeg`
+- `docs/evidence/22-terraform-cleanup-verification.jpeg`
