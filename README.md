@@ -251,3 +251,6 @@ The cleanup was successful, and my Terraform configuration, documentation, and p
 - `docs/evidence/20-terraform-destroy-plan.jpeg`
 - `docs/evidence/21-terraform-destroy-complete.jpeg`
 - `docs/evidence/22-terraform-cleanup-verification.jpeg`
+
+After successfully deploying, testing, and modifying my Terraform infrastructure, I completed the cleanup process using Terraform destroy. I verified that the managed resources were removed while preserving the configuration files, documentation, and screenshots in my GitHub repository. The infrastructure can be redeployed using Terraform apply
+
